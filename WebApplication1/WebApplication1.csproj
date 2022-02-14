@@ -151,6 +151,7 @@
       <DependentUpon>Ventasdb.edmx</DependentUpon>
       <LastGenOutput>Ventasdb.cs</LastGenOutput>
     </Content>
+    <Content Include="Notas\actividades por realizar.txt" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />

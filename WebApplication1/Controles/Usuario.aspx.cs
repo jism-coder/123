@@ -19,6 +19,11 @@ namespace WebApplication1.Controles
         protected void btnenviar_Click(object sender, EventArgs e)
         {
             bool crear = false;
+            ////  referencia a this 
+            ///La palabras "this" funciona para hacer referencia al campo del control web y se suma con el nombre del campo ejemplo:
+            /// sintaxis =   "this.nombrecampo"
+            /// esto se puede sumar con la propiedad del texto que se agregó al campo ejemplo:
+            /// this.campo.Text;
             txtenviar.Text = this.txtnombre.Text;
             ModeloUsiario obj = new ModeloUsiario();
             obj.Nombre = this.txtnombre.Text;
