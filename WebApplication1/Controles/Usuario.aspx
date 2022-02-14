@@ -69,7 +69,7 @@
             </table>
         </div>
         <asp:Button ID="btnenviar" runat="server" Text="Enviar" OnClick="btnenviar_Click" />
-        <asp:TextBox ID="txtenviar" runat="server" Height="174px" Width="309px" OnTextChanged="txtenviar_TextChanged"></asp:TextBox>
+        <asp:TextBox ID="txtenviar" runat="server" Height="174px" Width="309px"></asp:TextBox>
     </form>
 </body>
 </html>

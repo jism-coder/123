@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="VentasModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="ventas1Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Producto">
           <Key>
             <PropertyRef Name="PK_Productos" />
@@ -54,7 +54,7 @@
           <Property Name="FormaPago" Type="nvarchar" MaxLength="200" />
           <Property Name="Fecha" Type="date" />
         </EntityType>
-        <EntityContainer Name="VentasModelStoreContainer">
+        <EntityContainer Name="ventas1ModelStoreContainer">
           <EntitySet Name="Producto" EntityType="Self.Producto" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Totales" EntityType="Self.Totales" Schema="dbo" store:Type="Tables" />
@@ -65,7 +65,7 @@
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="VentasModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="ventas1Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="Producto">
           <Key>
             <PropertyRef Name="PK_Productos" />
@@ -115,7 +115,7 @@
           <Property Name="FormaPago" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
           <Property Name="Fecha" Type="DateTime" Precision="0" />
         </EntityType>
-        <EntityContainer Name="PruebasEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="ventas1Entities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Producto" EntityType="Self.Producto" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
           <EntitySet Name="Totales" EntityType="Self.Totales" />
@@ -127,9 +127,9 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="VentasModelStoreContainer" CdmEntityContainer="PruebasEntities">
+        <EntityContainerMapping StorageEntityContainer="ventas1ModelStoreContainer" CdmEntityContainer="ventas1Entities">
           <EntitySetMapping Name="Producto">
-            <EntityTypeMapping TypeName="VentasModel.Producto">
+            <EntityTypeMapping TypeName="ventas1Model.Producto">
               <MappingFragment StoreEntitySet="Producto">
                 <ScalarProperty Name="PK_Productos" ColumnName="PK_Productos" />
                 <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
@@ -140,7 +140,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="sysdiagrams">
-            <EntityTypeMapping TypeName="VentasModel.sysdiagrams">
+            <EntityTypeMapping TypeName="ventas1Model.sysdiagrams">
               <MappingFragment StoreEntitySet="sysdiagrams">
                 <ScalarProperty Name="name" ColumnName="name" />
                 <ScalarProperty Name="principal_id" ColumnName="principal_id" />
@@ -151,7 +151,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Totales">
-            <EntityTypeMapping TypeName="VentasModel.Totales">
+            <EntityTypeMapping TypeName="ventas1Model.Totales">
               <MappingFragment StoreEntitySet="Totales">
                 <ScalarProperty Name="PK_Totales" ColumnName="PK_Totales" />
                 <ScalarProperty Name="PK_Usuarios" ColumnName="PK_Usuarios" />
@@ -161,7 +161,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Usuario">
-            <EntityTypeMapping TypeName="VentasModel.Usuario">
+            <EntityTypeMapping TypeName="ventas1Model.Usuario">
               <MappingFragment StoreEntitySet="Usuario">
                 <ScalarProperty Name="PK_Usuarios" ColumnName="PK_Usuarios" />
                 <ScalarProperty Name="Nombre" ColumnName="Nombre" />
@@ -174,7 +174,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Ventas">
-            <EntityTypeMapping TypeName="VentasModel.Ventas">
+            <EntityTypeMapping TypeName="ventas1Model.Ventas">
               <MappingFragment StoreEntitySet="Ventas">
                 <ScalarProperty Name="PK_Ventas" ColumnName="PK_Ventas" />
                 <ScalarProperty Name="FormaPago" ColumnName="FormaPago" />

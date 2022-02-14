@@ -133,23 +133,23 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
-    <EntityDeploy Include="Modelos\Prueba.edmx">
+    <EntityDeploy Include="Modelos\Ventasdb.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Prueba.Designer.cs</LastGenOutput>
+      <LastGenOutput>Ventasdb.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Modelos\Prueba.edmx.diagram">
-      <DependentUpon>Prueba.edmx</DependentUpon>
+    <Content Include="Modelos\Ventasdb.edmx.diagram">
+      <DependentUpon>Ventasdb.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
-    <Content Include="Modelos\Prueba.Context.tt">
+    <Content Include="Modelos\Ventasdb.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Prueba.Context.cs</LastGenOutput>
-      <DependentUpon>Prueba.edmx</DependentUpon>
+      <DependentUpon>Ventasdb.edmx</DependentUpon>
+      <LastGenOutput>Ventasdb.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Modelos\Prueba.tt">
+    <Content Include="Modelos\Ventasdb.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Prueba.edmx</DependentUpon>
-      <LastGenOutput>Prueba.cs</LastGenOutput>
+      <DependentUpon>Ventasdb.edmx</DependentUpon>
+      <LastGenOutput>Ventasdb.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -222,37 +222,36 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Modelos\Modelos.cs" />
+    <Compile Include="Modelos\ModelosVentas.cs" />
     <Compile Include="Modelos\Producto.cs">
-      <DependentUpon>Prueba.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Modelos\Prueba.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Prueba.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Modelos\Prueba.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Prueba.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Modelos\Prueba.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Prueba.edmx</DependentUpon>
+      <DependentUpon>Ventasdb.tt</DependentUpon>
     </Compile>
     <Compile Include="Modelos\sysdiagrams.cs">
-      <DependentUpon>Prueba.tt</DependentUpon>
+      <DependentUpon>Ventasdb.tt</DependentUpon>
     </Compile>
     <Compile Include="Modelos\Totales.cs">
-      <DependentUpon>Prueba.tt</DependentUpon>
+      <DependentUpon>Ventasdb.tt</DependentUpon>
     </Compile>
     <Compile Include="Modelos\Usuario.cs">
-      <DependentUpon>Prueba.tt</DependentUpon>
+      <DependentUpon>Ventasdb.tt</DependentUpon>
     </Compile>
-    <Compile Include="Modelos\UsuarioBase.cs" />
     <Compile Include="Modelos\Ventas.cs">
-      <DependentUpon>Prueba.tt</DependentUpon>
+      <DependentUpon>Ventasdb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Ventasdb.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Ventasdb.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Ventasdb.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Ventasdb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Ventasdb.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Ventasdb.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">

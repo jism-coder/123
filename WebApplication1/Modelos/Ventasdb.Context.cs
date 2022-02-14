@@ -13,10 +13,10 @@ namespace WebApplication1.Modelos
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class PruebasEntities : DbContext
+    public partial class ventas1Entities : DbContext
     {
-        public PruebasEntities()
-            : base("name=PruebasEntities")
+        public ventas1Entities()
+            : base("name=ventas1Entities")
         {
         }
     

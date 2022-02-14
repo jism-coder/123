@@ -10,7 +10,7 @@ using WebApplication1.Modelos;
 namespace WebApplication1.Controles
 {
     public partial class Usuario : System.Web.UI.Page
-    { 
+    {
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -20,13 +20,30 @@ namespace WebApplication1.Controles
         {
             bool crear = false;
             txtenviar.Text = this.txtnombre.Text;
-            Nusuario obj = new Nusuario ();
+            ModeloUsiario obj = new ModeloUsiario();
             obj.Nombre = this.txtnombre.Text;
             obj.Apellido_Paterno = this.txtpaterno.Text;
-            obj.Apelllido_Materno = this.txtmaterno.Text;
+            obj.Apellido_Materno = this.txtmaterno.Text;
             obj.Direccion = this.txtdireccion.Text;
-            obj.Telefono = this.txtel.Text;
+            #region valida telefono en try
+            try
+            {
+                obj.Telefono = Int32.Parse(this.txtel.Text);
+            }
+            catch (Exception ex)
+            {
+                txtenviar.Text = ex.Message;
+
+            }
+            finally
+            {
+
+
+            }
+            #endregion
             obj.RFC = this.txtrfc.Text;
+            crear = Funciones.Funciones.Usuario(obj);
+
 
             if (crear == false)
             {
@@ -42,6 +59,6 @@ namespace WebApplication1.Controles
 
         }
 
-        
+
     }
 }
