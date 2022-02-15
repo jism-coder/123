@@ -1,5 +1,5 @@
-﻿1.- Completar el objeto de usuario y mapear los valores a la base de datos
-2.- Cambiar la referencia en el archivo de configuración "Web.Config", en sus llaves :
+﻿///1.- Completar el objeto de usuario y mapear los valores a la base de datos
+///2.- Cambiar la referencia en el archivo de configuración "Web.Config", en sus llaves :
 		ventas1Entities, en su propiedad source=DESKTOP-KTC4R91
-3.- Crear el usurio de base de datos para comunicación a la base de datos en casa
-4.- Configurar al Managament studio para inicio de sesión con usuario de SQL
+///3.- Crear el usurio de base de datos para comunicación a la base de datos en casa
+///4.- Configurar al Managament studio para inicio de sesión con usuario de SQL

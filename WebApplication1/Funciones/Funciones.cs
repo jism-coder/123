@@ -16,6 +16,12 @@ namespace WebApplication1.Funciones
                 ventas1Entities db = new ventas1Entities();
                 var tbUsr = new Usuario();
                 tbUsr.Nombre = obj.Nombre;
+                tbUsr.Apellido_Paterno = obj.Apellido_Paterno;
+                tbUsr.Apellido_Materno = obj.Apellido_Materno;
+                tbUsr.Direccion = obj.Direccion;
+                tbUsr.Telefono = obj.Telefono;
+                tbUsr.RFC = obj.RFC;
+
                 db.Usuario.Add(tbUsr);
                 db.SaveChanges();
                 respuesta = true;
