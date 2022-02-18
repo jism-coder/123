@@ -133,23 +133,23 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
-    <EntityDeploy Include="Modelos\Ventasdb.edmx">
+    <EntityDeploy Include="Modelos\Ventas.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Ventasdb.Designer.cs</LastGenOutput>
+      <LastGenOutput>Ventas.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Modelos\Ventasdb.edmx.diagram">
-      <DependentUpon>Ventasdb.edmx</DependentUpon>
+    <Content Include="Modelos\Ventas.edmx.diagram">
+      <DependentUpon>Ventas.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
-    <Content Include="Modelos\Ventasdb.Context.tt">
+    <Content Include="Modelos\Ventas.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Ventasdb.edmx</DependentUpon>
-      <LastGenOutput>Ventasdb.Context.cs</LastGenOutput>
+      <DependentUpon>Ventas.edmx</DependentUpon>
+      <LastGenOutput>Ventas.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Modelos\Ventasdb.tt">
+    <Content Include="Modelos\Ventas.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Ventasdb.edmx</DependentUpon>
-      <LastGenOutput>Ventasdb.cs</LastGenOutput>
+      <DependentUpon>Ventas.edmx</DependentUpon>
+      <LastGenOutput>Ventas1.cs</LastGenOutput>
     </Content>
     <Content Include="Notas\actividades por realizar.txt" />
     <Content Include="Scripts\bootstrap.js" />
@@ -224,35 +224,32 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Modelos\ModelosVentas.cs" />
-    <Compile Include="Modelos\Producto.cs">
-      <DependentUpon>Ventasdb.tt</DependentUpon>
+    <Compile Include="Modelos\Productos.cs">
+      <DependentUpon>Ventas.tt</DependentUpon>
     </Compile>
     <Compile Include="Modelos\sysdiagrams.cs">
-      <DependentUpon>Ventasdb.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Modelos\Totales.cs">
-      <DependentUpon>Ventasdb.tt</DependentUpon>
+      <DependentUpon>Ventas.tt</DependentUpon>
     </Compile>
     <Compile Include="Modelos\Usuario.cs">
-      <DependentUpon>Ventasdb.tt</DependentUpon>
+      <DependentUpon>Ventas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Ventas.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Ventas.Context.tt</DependentUpon>
     </Compile>
     <Compile Include="Modelos\Ventas.cs">
-      <DependentUpon>Ventasdb.tt</DependentUpon>
+      <DependentUpon>Ventas.tt</DependentUpon>
     </Compile>
-    <Compile Include="Modelos\Ventasdb.Context.cs">
+    <Compile Include="Modelos\Ventas.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Ventasdb.Context.tt</DependentUpon>
+      <DependentUpon>Ventas.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Modelos\Ventasdb.cs">
+    <Compile Include="Modelos\Ventas1.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Ventasdb.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Modelos\Ventasdb.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Ventasdb.edmx</DependentUpon>
+      <DependentUpon>Ventas.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">

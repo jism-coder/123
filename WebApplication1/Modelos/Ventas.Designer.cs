@@ -1,4 +1,4 @@
-﻿// La generación de código T4 está habilitada para el modelo 'C:\Users\LigreSol\Documents\Jaina\Proyectos\Curso .Net\123\WebApplication1\Modelos\Ventasdb.edmx'. 
+﻿// La generación de código T4 está habilitada para el modelo 'C:\Users\Lenovo Server\Desktop\1\123\WebApplication1\Modelos\Ventas.edmx'. 
 // Para habilitar la generación de código heredada, cambie el valor de la propiedad del diseñador 'Estrategia de generación de código'
 // por 'ObjectContext heredado'. Esta propiedad está disponible en la ventana Propiedades cuando se abre
 // el modelo en el diseñador.

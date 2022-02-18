@@ -15,7 +15,16 @@ namespace WebApplication1.Modelos
     public partial class Ventas
     {
         public int PK_Ventas { get; set; }
-        public string FormaPago { get; set; }
+        public Nullable<int> PK_Producto { get; set; }
+        public Nullable<int> PK_Usuarios { get; set; }
+        public string Producto { get; set; }
+        public Nullable<int> Cantidad { get; set; }
+        public string Usuario { get; set; }
         public Nullable<System.DateTime> Fecha { get; set; }
+        public string Forma_Pago { get; set; }
+        public string Total { get; set; }
+    
+        public virtual Productos Productos { get; set; }
+        public virtual Usuario Usuario1 { get; set; }
     }
 }

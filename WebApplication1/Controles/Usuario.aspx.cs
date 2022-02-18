@@ -48,8 +48,6 @@ namespace WebApplication1.Controles
             #endregion
             obj.RFC = this.txtrfc.Text;
             crear = Funciones.Funciones.Usuario(obj);
-
-
             if (crear == false)
             {
                 txtenviar.Text = "El usuario no se creo correctamnete";
@@ -59,6 +57,7 @@ namespace WebApplication1.Controles
                 txtenviar.Text = "El usuario se creo correctamente";
 
             }
+
 
 
 

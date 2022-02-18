@@ -12,21 +12,21 @@ namespace WebApplication1.Modelos
     using System;
     using System.Collections.Generic;
     
-    public partial class Usuario
+    public partial class Productos
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Usuario()
+        public Productos()
         {
             this.Ventas = new HashSet<Ventas>();
         }
     
-        public int PK_Usuarios { get; set; }
-        public string Nombre { get; set; }
-        public string Apellido_Paterno { get; set; }
-        public string Apellido_Materno { get; set; }
-        public string Direccion { get; set; }
-        public Nullable<decimal> Telefono { get; set; }
-        public string RFC { get; set; }
+        public int PK_Producto { get; set; }
+        public string Producto { get; set; }
+        public string Descripcion { get; set; }
+        public string Disponibilidad { get; set; }
+        public string Precio { get; set; }
+        public Nullable<int> Cantidad { get; set; }
+        public string Total { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Ventas> Ventas { get; set; }
