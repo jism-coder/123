@@ -41,14 +41,16 @@
       <PropertyRef Name="PK_Ventas" />
     </Key>
     <Property Name="PK_Ventas" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="PK_Usuario" Type="Int32" />
-    <Property Name="PK_Productos" Type="Int32" />
+    <Property Name="PK_Producto" Type="Int32" />
+    <Property Name="PK_Usuarios" Type="Int32" />
+    <Property Name="Producto" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
     <Property Name="Cantidad" Type="Int32" />
-    <Property Name="Precio" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-    <Property Name="Formapago" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Usuario" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
     <Property Name="Fecha" Type="DateTime" Precision="0" />
+    <Property Name="Forma_Pago" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Total" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="Productos" Relationship="Self.FK_Ventas_Productos" FromRole="Ventas" ToRole="Productos" />
-    <NavigationProperty Name="Usuario" Relationship="Self.FK_Ventas_Usuario" FromRole="Ventas" ToRole="Usuario" />
+    <NavigationProperty Name="Usuario1" Relationship="Self.FK_Ventas_Usuario" FromRole="Ventas" ToRole="Usuario" />
   </EntityType>
   <Association Name="FK_Ventas_Productos">
     <End Role="Productos" Type="Self.Productos" Multiplicity="0..1" />
@@ -58,7 +60,7 @@
         <PropertyRef Name="PK_Producto" />
       </Principal>
       <Dependent Role="Ventas">
-        <PropertyRef Name="PK_Productos" />
+        <PropertyRef Name="PK_Producto" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -70,11 +72,11 @@
         <PropertyRef Name="PK_Usuarios" />
       </Principal>
       <Dependent Role="Ventas">
-        <PropertyRef Name="PK_Usuario" />
+        <PropertyRef Name="PK_Usuarios" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="ventas1Entities1" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="ventas1Entities2" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Productos" EntityType="Self.Productos" />
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
     <EntitySet Name="Usuario" EntityType="Self.Usuario" />

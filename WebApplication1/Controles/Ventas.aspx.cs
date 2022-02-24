@@ -8,7 +8,7 @@ using WebApplication1.Modelos;
 
 namespace WebApplication1.Controles
 {
-    public partial class Productos : System.Web.UI.Page
+    public partial class Ventas : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -18,20 +18,24 @@ namespace WebApplication1.Controles
         protected void btnenviar_Click(object sender, EventArgs e)
         {
             int cantidad = Int32.Parse(this.txtcantidad.Text);
-            
-            bool crear = false;
-            txtenviar.Text = this.txtproducto.Text;
-            ModeloProductos obj = new ModeloProductos();
-            obj.Producto = this.txtproducto.Text;
-            obj.Descripcion = this.txtdescripcion.Text;
-            obj.Disponibilidad = this.txtdispo.Text;
-            obj.Precio = this.txtprecio.Text;
-            obj.Cantidad = cantidad;
+            DateTime fecha = new DateTime();
+            fecha = DateTime.Parse(this.txtfecha.Text);
 
-            crear = Funciones.Funciones.Productos(obj);
-            if (crear ==false)
+
+            bool crear = false;
+            txtproducto.Text = this.txtproducto.Text;
+            ModeloVentas obj = new ModeloVentas();
+            obj.Producto = this.txtproducto.Text;
+            obj.Usuario = this.txtusuario.Text;
+            obj.Fecha = fecha;
+            obj.Cantidad = cantidad;
+            obj.Total = this.txttotal.Text;
+            obj.Forma_Pago = this.txtfp.Text;
+
+            crear = Funciones.Funciones.Ventas(obj);
+            if (crear == false)
             {
-                txtenviar.Text= "El usuario no se creo correctamnete";
+                txtenviar.Text = "El usuario no se creo correctamnete";
             }
             else
             {
@@ -39,6 +43,5 @@ namespace WebApplication1.Controles
 
             }
         }
-
     }
 }

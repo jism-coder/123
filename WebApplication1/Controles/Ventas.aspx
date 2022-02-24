@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Ventas.aspx.cs" Inherits="WebApplication1.Modelos.Ventas1" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Ventas.aspx.cs" Inherits="WebApplication1.Controles.Ventas" %>
 
 <!DOCTYPE html>
 
@@ -6,16 +6,11 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
-    <style type="text/css">
-        .auto-style1 {
-            width: 859px;
-            height: 79px;
-        }
-    </style>
 </head>
 <body>
     <form id="form1" runat="server">
         <div>
+             <div>
             <h1>Se esta creando una  venta</h1>
             <table class="auto-style1">
                 <tr>
@@ -52,6 +47,7 @@
         </div>
         <asp:Button ID="btnenviar" runat="server" Text="Enviar" OnClick="btnenviar_Click" />
         <asp:TextBox ID="txtenviar" runat="server" Height="174px" Width="309px"></asp:TextBox>
+        </div>
     </form>
 </body>
 </html>

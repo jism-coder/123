@@ -39,12 +39,14 @@
       <PropertyRef Name="PK_Ventas" />
     </Key>
     <Property Name="PK_Ventas" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="PK_Usuario" Type="int" />
-    <Property Name="PK_Productos" Type="int" />
+    <Property Name="PK_Producto" Type="int" />
+    <Property Name="PK_Usuarios" Type="int" />
+    <Property Name="Producto" Type="nvarchar" MaxLength="500" />
     <Property Name="Cantidad" Type="int" />
-    <Property Name="Precio" Type="nvarchar" MaxLength="200" />
-    <Property Name="Formapago" Type="nvarchar" MaxLength="200" />
+    <Property Name="Usuario" Type="nvarchar" MaxLength="250" />
     <Property Name="Fecha" Type="date" />
+    <Property Name="Forma_Pago" Type="nvarchar" MaxLength="250" />
+    <Property Name="Total" Type="nvarchar" MaxLength="250" />
   </EntityType>
   <Association Name="FK_Ventas_Productos">
     <End Role="Productos" Type="Self.Productos" Multiplicity="0..1" />
@@ -54,7 +56,7 @@
         <PropertyRef Name="PK_Producto" />
       </Principal>
       <Dependent Role="Ventas">
-        <PropertyRef Name="PK_Productos" />
+        <PropertyRef Name="PK_Producto" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -66,7 +68,7 @@
         <PropertyRef Name="PK_Usuarios" />
       </Principal>
       <Dependent Role="Ventas">
-        <PropertyRef Name="PK_Usuario" />
+        <PropertyRef Name="PK_Usuarios" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

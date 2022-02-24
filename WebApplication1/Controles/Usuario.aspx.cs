@@ -25,7 +25,7 @@ namespace WebApplication1.Controles
             /// esto se puede sumar con la propiedad del texto que se agregó al campo ejemplo:
             /// this.campo.Text;
             txtenviar.Text = this.txtnombre.Text;
-            ModeloUsiario obj = new ModeloUsiario();
+            ModeloUsuario obj = new ModeloUsuario();
             obj.Nombre = this.txtnombre.Text;
             obj.Apellido_Paterno = this.txtpaterno.Text;
             obj.Apellido_Materno = this.txtmaterno.Text;

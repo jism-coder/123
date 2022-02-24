@@ -44,8 +44,8 @@
                 </tr>
             </table>
         </div>
-        <asp:Button ID="btnenviar" runat="server" Text="Enviar" />
-        <asp:TextBox ID="txtenviar" runat="server" Height="175px" Width="319px"></asp:TextBox>
+        <asp:Button ID="btnenviar" runat="server" Text="Enviar" OnClick="btnenviar_Click" />
+        <asp:TextBox ID="txtenviar" runat="server" Height="141px" Width="299px"></asp:TextBox>
     </form>
 </body>
 </html>

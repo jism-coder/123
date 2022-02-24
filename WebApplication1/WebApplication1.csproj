@@ -120,7 +120,9 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="Controles\Productos.aspx" />
     <Content Include="Controles\Usuario.aspx" />
+    <Content Include="Controles\Ventas.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -205,12 +207,26 @@
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
     <Compile Include="Controles\Controles.cs" />
+    <Compile Include="Controles\Productos.aspx.cs">
+      <DependentUpon>Productos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\Productos.aspx.designer.cs">
+      <DependentUpon>Productos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Controles\Usuario.aspx.cs">
       <DependentUpon>Usuario.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Controles\Usuario.aspx.designer.cs">
       <DependentUpon>Usuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Ventas.aspx.cs">
+      <DependentUpon>Ventas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\Ventas.aspx.designer.cs">
+      <DependentUpon>Ventas.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>

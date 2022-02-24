@@ -7,11 +7,11 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace WebApplication1.Modelos
+namespace WebApplication1.Controles
 {
 
 
-    public partial class Ventas1
+    public partial class Ventas
     {
 
         /// <summary>
