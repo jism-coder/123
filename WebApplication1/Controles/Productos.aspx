@@ -46,6 +46,15 @@
         </div>
         <asp:Button ID="btnenviar" runat="server" Text="Enviar" OnClick="btnenviar_Click" />
         <asp:TextBox ID="txtenviar" runat="server" Height="141px" Width="299px"></asp:TextBox>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+        <br />
+        <br />
+&nbsp;<asp:Button ID="bto1Producto" runat="server" Text="Consulta 1 producto" OnClick="bto1Producto_Click" />
+        <br />
+    &nbsp;<asp:Label ID="CualproductoId" runat="server" Text="Que producto?"></asp:Label>
+&nbsp;<asp:TextBox ID="txboxQueProducto" runat="server"></asp:TextBox>
+        <br />
+        <asp:TextBox ID="txtResultadoQueProducto" runat="server" Height="331px" Width="429px"></asp:TextBox>
     </form>
 </body>
 </html>

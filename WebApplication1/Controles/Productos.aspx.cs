@@ -17,28 +17,56 @@ namespace WebApplication1.Controles
 
         protected void btnenviar_Click(object sender, EventArgs e)
         {
-            int cantidad = Int32.Parse(this.txtcantidad.Text);
-            
-            bool crear = false;
-            txtenviar.Text = this.txtproducto.Text;
-            ModeloProductos obj = new ModeloProductos();
-            obj.Producto = this.txtproducto.Text;
-            obj.Descripcion = this.txtdescripcion.Text;
-            obj.Disponibilidad = this.txtdispo.Text;
-            obj.Precio = this.txtprecio.Text;
-            obj.Cantidad = cantidad;
-
-            crear = Funciones.Funciones.Productos(obj);
-            if (crear ==false)
+            try
             {
-                txtenviar.Text= "El usuario no se creo correctamnete";
+                int cantidad = Int32.Parse(this.txtcantidad.Text);
+                bool crear = false;
+                txtenviar.Text = this.txtproducto.Text;
+                ModeloProductos obj = new ModeloProductos();
+                obj.Producto = this.txtproducto.Text;
+                obj.Descripcion = this.txtdescripcion.Text;
+                obj.Disponibilidad = this.txtdispo.Text;
+                obj.Precio = this.txtprecio.Text;
+                obj.Cantidad = cantidad;
+                crear = Funciones.Funciones.Productos(obj);
+                if (crear == false)
+                {
+                    txtenviar.Text = "El usuario se creo correctamnete";
+                }
+                else
+                {
+                    txtenviar.Text = "El usuario se creo correctamente";
+
+                }
             }
-            else
+            catch (Exception exbtnenviar_Click)
             {
-                txtenviar.Text = "El usuario se creo correctamente";
-
+                txtenviar.Text = exbtnenviar_Click.Message + " | " + exbtnenviar_Click.StackTrace;
             }
         }
 
+        protected void bto1Producto_Click(object sender, EventArgs e)
+        {
+            int producto = int.MaxValue;
+            try
+            {
+                Consultas.Consultas c = new Consultas.Consultas();
+
+                producto = int.Parse(this.txboxQueProducto.Text);
+
+                ModeloProductos objProducto = new ModeloProductos();
+
+                objProducto = c.get1Producto(producto);
+
+                txtResultadoQueProducto.Text = objProducto.Producto + "|" + objProducto.Precio;
+
+            }
+            catch (Exception exbto1Producto_Click)
+            {
+                this.txtenviar.Text = exbto1Producto_Click.Message;
+                throw;
+            }
+
+        }
     }
 }

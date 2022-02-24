@@ -46,9 +46,11 @@ namespace WebApplication1.Funciones
                 tbPrd.Disponibilidad = obj.Disponibilidad;
                 tbPrd.Cantidad = obj.Cantidad;
                 tbPrd.Precio = obj.Precio;
+                db.Productos.Add(tbPrd);
+                db.SaveChanges();
            
             }
-            catch (Exception)
+            catch (Exception )
             {
 
                 throw;
