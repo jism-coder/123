@@ -18,6 +18,7 @@ namespace WebApplication1.Controles
 
         protected void btnenviar_Click(object sender, EventArgs e)
         {
+            
             bool crear = false;
             ////  referencia a this 
             ///La palabras "this" funciona para hacer referencia al campo del control web y se suma con el nombre del campo ejemplo:
@@ -34,15 +35,15 @@ namespace WebApplication1.Controles
             try
             {
                 obj.Telefono = Int32.Parse(this.txtel.Text);
+
             }
             catch (Exception ex)
             {
-                txtenviar.Text = ex.Message;
 
+                txtenviar.Text = ex.Message;
             }
             finally
             {
-
 
             }
             #endregion

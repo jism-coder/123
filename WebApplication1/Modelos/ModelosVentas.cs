@@ -11,11 +11,12 @@ namespace WebApplication1.Modelos
         public string Apellido_Paterno { get; set; }
         public string Apellido_Materno { get; set; }
         public string Direccion { get; set; }
-        public Nullable<decimal> Telefono { get; set; }
+        public int Telefono { get; set; }
         public string RFC { get; set; }
     }
     public class ModeloProductos
     {
+        public int pk_producto { get; set; }
         public string Producto { get; set; }
         public string Descripcion { get; set; }
         public string Disponibilidad { get; set; }

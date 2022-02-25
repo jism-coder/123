@@ -46,7 +46,11 @@ namespace WebApplication1.Funciones
                 tbPrd.Disponibilidad = obj.Disponibilidad;
                 tbPrd.Cantidad = obj.Cantidad;
                 tbPrd.Precio = obj.Precio;
-           
+
+                db.Productos.Add(tbPrd);
+                db.SaveChanges();
+                respuesta = true;
+
             }
             catch (Exception)
             {
@@ -68,7 +72,11 @@ namespace WebApplication1.Funciones
                 tbventas.Fecha = obj.Fecha;
                 tbventas.Cantidad = obj.Cantidad;
                 tbventas.Total = obj.Total;
-               
+
+                db.Ventas.Add(tbventas);
+                db.SaveChanges();
+                respuesta = true;
+
 
             }
             catch (Exception)
