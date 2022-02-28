@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -10,6 +11,7 @@ namespace WebApplication1.Controles
 {
     public partial class Productos : System.Web.UI.Page
     {
+        Consultas.Consultas c = new Consultas.Consultas();
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -50,7 +52,6 @@ namespace WebApplication1.Controles
             int producto = int.MaxValue;
             try
             {
-                Consultas.Consultas c = new Consultas.Consultas();
 
                 producto = int.Parse(this.txboxQueProducto.Text);
 
@@ -66,6 +67,30 @@ namespace WebApplication1.Controles
                 this.txtenviar.Text = exbto1Producto_Click.Message;
                 throw;
             }
+
+        }
+
+        protected void btnList_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.txtLits.Text = "procesando...";
+                List<ModeloProductos> objList = new List<ModeloProductos>();
+                objList = c.getProductos();
+                this.txtLits.Text = "consulta generada =)";
+                foreach (var i in objList)
+                {
+                    this.txtLits.Text = i.Producto;
+                    Thread.Sleep(2000);
+                }
+
+            }
+            catch (Exception exbtnList_Click)
+            {
+                this.txtLits.Text = exbtnList_Click.Message;
+                throw;
+            }
+
 
         }
     }

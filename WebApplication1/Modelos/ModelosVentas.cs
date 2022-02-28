@@ -16,6 +16,7 @@ namespace WebApplication1.Modelos
     }
     public class ModeloProductos
     {
+        public int Pk_Producto { get; set; }
         public string Producto { get; set; }
         public string Descripcion { get; set; }
         public string Disponibilidad { get; set; }

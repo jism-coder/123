@@ -54,7 +54,13 @@
     &nbsp;<asp:Label ID="CualproductoId" runat="server" Text="Que producto?"></asp:Label>
 &nbsp;<asp:TextBox ID="txboxQueProducto" runat="server"></asp:TextBox>
         <br />
-        <asp:TextBox ID="txtResultadoQueProducto" runat="server" Height="331px" Width="429px"></asp:TextBox>
+        <asp:TextBox ID="txtResultadoQueProducto" runat="server" Height="58px" Width="181px"></asp:TextBox>
+        <br />
+        <br />
+        Consultas lista de objetos<br />
+        <asp:Button ID="btnList" runat="server" Text="Lista porductos" OnClick="btnList_Click" />
+        <br />
+        <asp:TextBox ID="txtLits" runat="server" Height="240px" Width="328px"></asp:TextBox>
     </form>
 </body>
 </html>
