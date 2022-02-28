@@ -46,8 +46,22 @@
             </table>
         </div>
         <asp:Button ID="btnenviar" runat="server" Text="Enviar" OnClick="btnenviar_Click" />
-        <asp:TextBox ID="txtenviar" runat="server" Height="174px" Width="309px"></asp:TextBox>
-        </div>
+        <asp:TextBox ID="txtenviar" runat="server" Height="89px" Width="226px"></asp:TextBox>
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>
+        <br/>
+        <br/>
+        &nbsp;<asp:Button ID="bto1Venta" runat="server" Text="Consulta 1 venta" OnClick="bto1Venta_Click" />
+            <br />
+        &nbsp;<asp:Label ID="CualVentaId" runat="server" Text="Que venta?"></asp:Label>
+        &nbsp;<asp:TextBox ID="txboxQueVenta" runat="server"></asp:TextBox>
+            <br />
+            <asp:TextBox ID="txtResultadoQueVenta" runat="server" Height="120px" Width="351px"></asp:TextBox>
+            <br />
+            Consultas lista de usuario<br />
+            <asp:Button ID="btnList" runat="server" Text="Lista Ventas" OnClick="btnList_Click" />
+            <br />
+            <asp:TextBox ID="txtLits" runat="server" Height="129px" Width="255px"></asp:TextBox>
+            </div>
     </form>
 </body>
 </html>

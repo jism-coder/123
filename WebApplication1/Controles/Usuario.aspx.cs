@@ -18,6 +18,7 @@ namespace WebApplication1.Controles
 
         protected void btnenviar_Click(object sender, EventArgs e)
         {
+
             
             bool crear = false;
             ////  referencia a this 
@@ -51,19 +52,33 @@ namespace WebApplication1.Controles
             crear = Funciones.Funciones.Usuario(obj);
             if (crear == false)
             {
-                txtenviar.Text = "El usuario no se creo correctamnete";
+                txtenviar.Text = "El usuario no se creo correctamente";
             }
             else
             {
                 txtenviar.Text = "El usuario se creo correctamente";
 
             }
-
-
-
-
         }
+           
+        protected void bto1Usuario_Click(object sender, EventArgs e)
+        {
+            int usuario = int.MaxValue;
+            try
+            {
+                Consultas.Consultas c = new Consultas.Consultas();
+                usuario = int.Parse(this.txboxQueUsuario.Text);
+                ModeloUsuario objUsuario = new ModeloUsuario();
+                objUsuario = c.get1Usuario(usuario);
+                txtResultadoQueUsuario.Text = objUsuario.Nombre + "|" + objUsuario.Direccion; ;
 
+            }
+            catch (Exception exbto1Usuario_Click)
 
+            {
+                this.txtenviar.Text = exbto1Usuario_Click.Message;
+                throw;
+            }
+        }
     }
 }

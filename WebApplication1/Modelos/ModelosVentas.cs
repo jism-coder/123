@@ -7,6 +7,7 @@ namespace WebApplication1.Modelos
 {
     public class ModeloUsuario
     {
+        public string PK_Usuario { get; set; }
         public string Nombre { get; set; }
         public string Apellido_Paterno { get; set; }
         public string Apellido_Materno { get; set; }
@@ -27,6 +28,7 @@ namespace WebApplication1.Modelos
     }
     public class ModeloVentas
     {
+        public int pk_ventas { get; set; }
         public string Producto { get; set; }
         public string Usuario { get; set; }
         public int Cantidad { get; set; }

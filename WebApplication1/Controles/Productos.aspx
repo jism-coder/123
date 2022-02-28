@@ -43,9 +43,23 @@
                     </td>
                 </tr>
             </table>
-        </div>
         <asp:Button ID="btnenviar" runat="server" Text="Enviar" OnClick="btnenviar_Click" />
         <asp:TextBox ID="txtenviar" runat="server" Height="141px" Width="299px"></asp:TextBox>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>
+    <br/>
+    <br/>
+    &nbsp;<asp:Button ID="bto1Producto" runat="server" Text="Consulta 1 producto" OnClick="bto1Producto_Click" />
+        <br />
+    &nbsp;<asp:Label ID="CualproductoId" runat="server" Text="Que producto?"></asp:Label>
+&nbsp;<asp:TextBox ID="txboxQueProducto" runat="server"></asp:TextBox>
+        <br />
+        <asp:TextBox ID="txtResultadoQueProducto" runat="server" Height="58px" Width="248px"></asp:TextBox>
+        <br />
+        Consultas lista de objetos<br />
+        <asp:Button ID="btnList" runat="server" Text="Lista porductos" OnClick="btnList_Click" />
+        <br />
+        <asp:TextBox ID="txtLits" runat="server" Height="129px" Width="255px"></asp:TextBox>
+      </div>
     </form>
 </body>
 </html>

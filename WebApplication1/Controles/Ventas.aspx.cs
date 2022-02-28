@@ -10,6 +10,7 @@ namespace WebApplication1.Controles
 {
     public partial class Ventas : System.Web.UI.Page
     {
+        Consultas.Consultas c = new Consultas.Consultas();
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -42,6 +43,50 @@ namespace WebApplication1.Controles
                 txtenviar.Text = "El usuario se creo correctamente";
 
             }
+        }
+
+        protected void bto1Venta_Click(object sender, EventArgs e)
+        {
+            int ventas = int.MaxValue;
+            try
+            {
+               
+                ventas = int.Parse(this.txboxQueVenta.Text);
+                ModeloVentas objVenta = new ModeloVentas();
+                objVenta = c.get1Ventas(ventas);
+                txtResultadoQueVenta.Text = objVenta.Producto + "|" + objVenta.Cantidad + "|" + objVenta.Usuario;
+
+            }
+            catch (Exception exbto1Venta_Click)
+
+            {
+                this.txtenviar.Text = exbto1Venta_Click.Message;
+                throw;
+            }
+        }
+
+        protected void btnList_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.txtLits.Text = "procesando...";
+                List<ModeloVentas> objList = new List<ModeloVentas>();
+                objList = c.getVentas();
+                this.txtLits.Text = "consulta generada =)";
+                foreach (var i in objList)
+                {
+                    this.txtLits.Text = i.Producto;
+
+                }
+
+            }
+            catch (Exception exbtnList_Click)
+            {
+                this.txtLits.Text = exbtnList_Click.Message;
+                throw;
+            }
+
+
         }
     }
 }
