@@ -15,15 +15,53 @@
             ID="idGvProductos"
             runat="server"
             AutoGenerateColumns="false"
+            DataKeyNames="PK_Producto"
+            OnRowCommand="ComandRowProducto"
             >
             <Columns>
-
-
+                <asp:TemplateField ControlStyle-CssClass="ms-crm-List-Datacell">
+                    <ItemTemplate>
+                        <asp:CheckBox 
+                            runat="server" 
+                            ID="idrdSelecciona" 
+                            />
+                    </ItemTemplate>
+                </asp:TemplateField>
                 <asp:BoundField DataField="PK_Producto" HeaderText="No de producto" />
                 <asp:BoundField DataField="Producto" HeaderText="Producto" />
-
+                <asp:ButtonField ButtonType="Button"
+                    runat="server"
+                    HeaderText="Consulta producto"
+                    CommandName="ConsultaProducto" 
+                    Text="ConsultaProducto" />
             </Columns>
         </asp:GridView>
+        <br />
+
+        <asp:Button ID="btnConsultaProducto" runat="server" Text="Limpiar consulta" OnClick="btnConsultaProducto_Click" />
+
+    
+        <br />
+
+    
+        Producto<br />
+        <asp:TextBox ID="txtProducto" runat="server" Visible="false" ></asp:TextBox>
+        <br />
+        <br />
+        Descricpción:<br />
+        <asp:TextBox ID="txtDescripción" runat="server" Visible="false"></asp:TextBox>
+        <br />
+        <br />
+        Disponibilidad<br />
+        <asp:TextBox ID="txtDisponibilidad" runat="server" Visible="false"></asp:TextBox>
+        <br />
+        <br />
+        Precio<br />
+        <asp:TextBox ID="txtPrecio" runat="server" Visible="false"></asp:TextBox>
+        <br />
+        <br />
+        Cantidad<br />
+        <asp:TextBox ID="txtCantidad" runat="server" Visible="false"></asp:TextBox>
     </form>
 </body>
 </html>

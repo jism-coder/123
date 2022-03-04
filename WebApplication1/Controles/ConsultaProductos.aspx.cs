@@ -31,5 +31,50 @@ namespace WebApplication1.Controles
 
             }
         }
+
+        protected void ComandRowProducto(object sender, GridViewCommandEventArgs e)
+        {
+            int nRowIndex = Int32.Parse(e.CommandArgument.ToString());
+            string pk = idGvProductos.DataKeys[nRowIndex].Value.ToString();
+            int valor = int.Parse(pk);
+
+
+            Consultas.Consultas c = new Consultas.Consultas();
+            ModeloProductos obj = new ModeloProductos();
+            obj = c.get1Producto(valor);
+
+            txtProducto.Text = obj.Producto;
+            txtProducto.Visible = true;
+
+            txtDescripción.Text = obj.Descripcion;
+            txtDescripción.Visible = true;
+
+            txtDisponibilidad.Text = obj.Disponibilidad;
+            txtDisponibilidad.Visible = true;
+
+            txtPrecio.Text = obj.Precio;
+            txtPrecio.Visible = true;
+
+            txtCantidad.Text = obj.Cantidad.ToString();
+            txtCantidad.Visible = true;
+        }
+
+        protected void btnConsultaProducto_Click(object sender, EventArgs e)
+        {
+            txtProducto.Text = "";
+            txtProducto.Visible = false;
+
+            txtDescripción.Text = "";
+            txtDescripción.Visible = false;
+
+            txtDisponibilidad.Text = "";
+            txtDisponibilidad.Visible = false;
+
+            txtPrecio.Text = "";
+            txtPrecio.Visible = false;
+
+            txtCantidad.Text = "";
+            txtCantidad.Visible = false;
+        }
     }
 }
