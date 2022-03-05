@@ -11,11 +11,12 @@ namespace WebApplication1.Controles
 {
     public partial class Usuario : System.Web.UI.Page
     {
+        Consultas.Consultas c = new Consultas.Consultas();
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
-
+        //un solo producto
         protected void btnenviar_Click(object sender, EventArgs e)
         {
 
@@ -66,11 +67,11 @@ namespace WebApplication1.Controles
             int usuario = int.MaxValue;
             try
             {
-                Consultas.Consultas c = new Consultas.Consultas();
+                
                 usuario = int.Parse(this.txboxQueUsuario.Text);
                 ModeloUsuario objUsuario = new ModeloUsuario();
                 objUsuario = c.get1Usuario(usuario);
-                txtResultadoQueUsuario.Text = objUsuario.Nombre + "|" + objUsuario.Direccion; ;
+                txtResultadoQueUsuario.Text = objUsuario.PK_Usuarios + "|" + objUsuario.Nombre +"|" + objUsuario.Apellido_Paterno; 
 
             }
             catch (Exception exbto1Usuario_Click)
@@ -79,6 +80,29 @@ namespace WebApplication1.Controles
                 this.txtenviar.Text = exbto1Usuario_Click.Message;
                 throw;
             }
+        }
+
+        protected void btnList_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.txtLits.Text = "procesando...";
+                List<ModeloUsuario> objList = new List<ModeloUsuario>();
+                objList = c.getUsuario();
+                this.txtLits.Text = "consulta generada =)";
+                foreach (var i in objList)
+                {
+                    this.txtLits.Text = i.Nombre;
+
+                }
+
+            }
+            catch (Exception exbtnList_Click)
+            {
+                this.txtLits.Text = exbtnList_Click.Message;
+                throw;
+            }
+
         }
     }
 }

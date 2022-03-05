@@ -78,7 +78,7 @@
          &nbsp;<asp:Label ID="CualusuarioId" runat="server" Text="Que usuario?"></asp:Label>
             &nbsp;<asp:TextBox ID="txboxQueUsuario" runat="server"></asp:TextBox>
             <br />
-            <asp:TextBox ID="txtResultadoQueUsuario" runat="server" Height="217px" Width="370px"></asp:TextBox>
+            <asp:TextBox ID="txtResultadoQueUsuario" runat="server" Height="217px" Width="370px"></asp:TextBox> <br />
             Consultas lista de usuario<br />
             <asp:Button ID="btnList" runat="server" Text="Lista usuario" OnClick="btnList_Click" />
             <br />

@@ -57,7 +57,7 @@
             <br />
             <asp:TextBox ID="txtResultadoQueVenta" runat="server" Height="120px" Width="351px"></asp:TextBox>
             <br />
-            Consultas lista de usuario<br />
+            Consultas lista de ventas<br />
             <asp:Button ID="btnList" runat="server" Text="Lista Ventas" OnClick="btnList_Click" />
             <br />
             <asp:TextBox ID="txtLits" runat="server" Height="129px" Width="255px"></asp:TextBox>

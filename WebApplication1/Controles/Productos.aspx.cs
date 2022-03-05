@@ -30,7 +30,6 @@ namespace WebApplication1.Controles
                 obj.Disponibilidad = this.txtdispo.Text;
                 obj.Precio = this.txtprecio.Text;
                 obj.Cantidad = cantidad;
-
                 crear = Funciones.Funciones.Productos(obj);
                 if (crear == false)
                 {
@@ -84,8 +83,8 @@ namespace WebApplication1.Controles
                 this.txtLits.Text = "consulta generada =)";
                 foreach (var i in objList)
                 {
-                    this.txtLits.Text = i.Producto;
-                    
+                    this.txtLits.Text = i.Producto + "|" + i.Precio; ;
+               
 
                 }
 
