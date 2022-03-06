@@ -47,7 +47,7 @@ namespace WebApplication1.Controles
             txtDescripcion.Visible = true;
 
             txtDisponibilidad.Text = obj.Disponibilidad;
-            txtProducto.Visible = true;
+            txtDisponibilidad.Visible = true;
 
             txtPrecio.Text = obj.Precio;
             txtPrecio.Visible = true;
@@ -74,6 +74,11 @@ namespace WebApplication1.Controles
 
             txtCantidad.Text = "";
             txtCantidad.Visible = false;
+
+        }
+
+        protected void idGvProductos_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
     }

@@ -10,17 +10,61 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <h1>Consultas usuarios</h1>
+            <h1>Consultas usuarios</h1></div>
             <asp:GridView 
                 ID="idGvUsuarios"
                 runat="server"
-                AutoGenerateColumns="false">
+                AutoGenerateColumns="false"
+                DataKeyNames="PK_Usuarios"
+                OnRowCommand="ComandRowUsuario" OnSelectedIndexChanged="idGvUsuarios_SelectedIndexChanged" 
+                >
                 <Columns>
+                    <asp:TemplateField ControlStyle-CssClass="ms-crm-List-Datacell">
+                        <ItemTemplate>
+                            <asp:CheckBox 
+                                ID="idrSelecciona"
+                                runat="server" 
+                                />
+                        </ItemTemplate>
+                    </asp:TemplateField>                 
                     <asp:BoundField DataField="PK_Usuarios" HeaderText="No de usuario" />
                     <asp:BoundField DataField="Nombre" HeaderText="Usuario" />
-                </Columns>
+                    <asp:ButtonField ButtonType="Button"
+                       runat="server" 
+                       HeaderText="Consulta usuario"
+                       CommandName="Consultausuario"
+                       Text="ConsultarUsuario"                                 
+                        />                       
+               </Columns>
             </asp:GridView>
-        </div>
+            <br />
+            <asp:Button ID="btnConsultaUsuario" runat="server" Text="Limpia consulta"  OnClick="btnConsultaUsuario_Click"/>
+            <br />
+            Nombre:<br />
+            <asp:TextBox ID="txtNombre" runat="server" Visible="false"></asp:TextBox>
+            <br />
+            <br />
+            Apellido paterno:<br />
+            <asp:TextBox ID="txtApeterno" runat="server" Visible="false"></asp:TextBox>
+            <br />
+            <br />
+            Apellido materno:<br />
+            <asp:TextBox ID="txtAmaterno" runat="server" Visible="false"></asp:TextBox>
+            <br />
+            <br />
+            Direccion:<br />
+            <asp:TextBox ID="txtDireccion" runat="server" Visible="false"></asp:TextBox>
+            <br />
+            <br />
+            Telefono:<br />
+            <asp:TextBox ID="txtTelefono" runat="server" Visible="false"></asp:TextBox>
+            <br />
+            <br />
+            RFC:<br />
+            <asp:TextBox ID="txtRFC" runat="server" Visible="false"></asp:TextBox>
+            <br />
+            <br />
+       
     </form>
 </body>
 </html>
