@@ -16,7 +16,7 @@
             runat="server"
             AutoGenerateColumns="false"
             DataKeyNames="PK_Producto"
-            OnRowCommand="ComandRowProducto"
+            OnRowCommand="ComandRowProducto" 
             >
             <Columns>
                 <asp:TemplateField ControlStyle-CssClass="ms-crm-List-Datacell">
@@ -38,12 +38,16 @@
         </asp:GridView>
         <br />
 
-        <asp:Button ID="btnConsultaProducto" runat="server" Text="Limpiar consulta" OnClick="btnConsultaProducto_Click" />
+        <asp:Button ID="btnConsultaProducto" runat="server" Text="Actualizar" />
+
+    
+        <br />
+        <asp:TextBox ID="txtPK_Producto" runat="server" Visible="false"></asp:TextBox>
 
     
         <br />
 
-    
+
         Producto<br />
         <asp:TextBox ID="txtProducto" runat="server" Visible="false" ></asp:TextBox>
         <br />
@@ -62,6 +66,10 @@
         <br />
         Cantidad<br />
         <asp:TextBox ID="txtCantidad" runat="server" Visible="false"></asp:TextBox>
+
+         <br />
+
+         <asp:Button ID="btnActualizarRegistro" runat="server" Text="Actualizar" OnClick="btnActualizarRegistro_Click"   />
     </form>
 </body>
 </html>

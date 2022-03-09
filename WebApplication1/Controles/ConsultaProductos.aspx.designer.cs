@@ -42,6 +42,15 @@ namespace WebApplication1.Controles
         protected global::System.Web.UI.WebControls.Button btnConsultaProducto;
 
         /// <summary>
+        /// Control txtPK_Producto.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtPK_Producto;
+
+        /// <summary>
         /// Control txtProducto.
         /// </summary>
         /// <remarks>
@@ -85,5 +94,14 @@ namespace WebApplication1.Controles
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtCantidad;
+
+        /// <summary>
+        /// Control btnActualizarRegistro.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnActualizarRegistro;
     }
 }

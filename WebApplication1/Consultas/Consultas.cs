@@ -8,6 +8,24 @@ namespace WebApplication1.Consultas
 {
     public class Consultas
     {
+        public void actualizaRegistro(ModeloProductos obj)
+        {
+            ventas1Entities2 db = new ventas1Entities2();
+
+            var actualizaProucto = new Productos();
+            actualizaProucto.PK_Producto = obj.Pk_Producto;
+            actualizaProucto.Producto = obj.Producto;
+            actualizaProucto.Descripcion = obj.Descripcion;
+            actualizaProucto.Disponibilidad = obj.Disponibilidad;
+            actualizaProucto.Precio = obj.Precio;
+            actualizaProucto.Cantidad = obj.Cantidad;
+
+            db.Entry(actualizaProucto).State = System.Data.Entity.EntityState.Modified;
+
+            db.SaveChanges();
+
+        }
+
         public ModeloProductos get1Producto(int pk_producto)
         {
             ModeloProductos r = new ModeloProductos();
@@ -18,6 +36,7 @@ namespace WebApplication1.Consultas
                          where a.PK_Producto == pk_producto
                          select new ModeloProductos
                          {
+                             Pk_Producto = a.PK_Producto,
                              Producto = a.Producto,
                              Descripcion = a.Descripcion,
                              Disponibilidad = a.Disponibilidad,
