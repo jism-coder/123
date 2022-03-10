@@ -40,6 +40,7 @@ namespace WebApplication1.Controles
             ModeloProductos obj = new ModeloProductos();
             obj = c.get1Producto(valor);
 
+            txtPK_Producto.Text = obj.pk_producto.ToString();
             txtProducto.Text = obj.Producto;
             txtProducto.Visible = true;
 
@@ -75,11 +76,24 @@ namespace WebApplication1.Controles
             txtCantidad.Text = "";
             txtCantidad.Visible = false;
 
-        }
+        }       
 
-        protected void idGvProductos_SelectedIndexChanged(object sender, EventArgs e)
+        protected void btnActualizarRegistro_Click(object sender, EventArgs e)
         {
+            int cantidad = Int32.Parse(txtCantidad.Text);
+            int pk = Int32.Parse(txtPK_Producto.Text);        
+          
+            ModeloProductos obj = new ModeloProductos();
+            Consultas.Consultas c = new Consultas.Consultas();
+            
+            obj.pk_producto = pk;
+            obj.Producto = txtProducto.Text;
+            obj.Descripcion = txtDescripcion.Text;
+            obj.Disponibilidad = txtDisponibilidad.Text;
+            obj.Precio = txtPrecio.Text;
+            obj.Cantidad = cantidad;
 
+            c.actualizaRegistro(obj);
         }
     }
 }  

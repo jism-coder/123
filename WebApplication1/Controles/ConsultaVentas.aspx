@@ -18,7 +18,7 @@
                 runat="server"
                 AutoGenerateColumns="false"
                 DataKeyNames="PK_Ventas"
-                OnRowCommand="ComandRowVentas" OnSelectedIndexChanged="idGvVentas_SelectedIndexChanged" 
+                OnRowCommand="ComandRowVentas" 
                 >
                 <Columns>
                     <asp:TemplateField ControlStyle-CssClass="ms-crm-List-Datacell">
@@ -40,7 +40,9 @@
                 </Columns>
             </asp:GridView>
         <br />
-        <asp:Button ID="btnConsultaVenta" runat="server" Text="Limpiar consulta" OnClick="btnConsultaVenta_Click"/>
+        <asp:Button ID="btnConsultaVenta" runat="server" Text="Limpiar consulta" />
+        <br />
+        <asp:TextBox ID="txtPK_Ventas" runat="server" Visible="false"></asp:TextBox>
         <br />
         Producto:<br />
         <asp:TextBox ID="txtProducto" runat="server" Visible="false"></asp:TextBox>
@@ -62,6 +64,11 @@
         <asp:TextBox ID="txtFormapago" runat="server" Visible="false"></asp:TextBox>
         <br />
         <br />
+       Total:<br />
+        <asp:TextBox ID="txtTotal" runat="server" Visible="false"></asp:TextBox>
+        <br />
+        <br />
+        <asp:Button ID="btnRegistroVentas" runat="server" Text="Actualiza" OnClick="btnActualizarRegistroVentas_Click" />
     </form>
 </body>
 </html>

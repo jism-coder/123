@@ -39,6 +39,7 @@ namespace WebApplication1.Controles
             ModeloVentas obj = new ModeloVentas();
             obj = c.get1Ventas(valor);
 
+            txtPK_Ventas.Text = obj.pk_ventas.ToString();
             txtProducto.Text = obj.Producto;
             txtProducto.Visible = true;
             
@@ -53,6 +54,9 @@ namespace WebApplication1.Controles
 
             txtFormapago.Text = obj.Forma_Pago;
             txtFormapago.Visible = true;
+
+            txtTotal.Text = obj.Total;
+            txtTotal.Visible = true;
 
 
         }
@@ -74,6 +78,32 @@ namespace WebApplication1.Controles
             txtFormapago.Text = "";
             txtFormapago.Visible = false;
 
+            txtTotal.Text = "";
+            txtTotal.Visible = false;
+
+
+        }
+
+        protected void btnActualizarRegistroVentas_Click(object sender, EventArgs e)
+        {
+            int pk = Int32.Parse(txtPK_Ventas.Text);
+            int cantidad = Int32.Parse(txtCantidad.Text);
+            DateTime fecha = new DateTime();
+            fecha = DateTime.Parse(this.txtFecha.Text);
+
+
+            ModeloVentas obj = new ModeloVentas();
+            Consultas.Consultas c = new Consultas.Consultas();
+
+            obj.pk_ventas = pk;
+            obj.Producto = txtProducto.Text;
+            obj.Cantidad = cantidad;
+            obj.Usuario = txtUsuario.Text;
+            obj.Fecha = fecha;
+            obj.Forma_Pago = txtFormapago.Text;
+            obj.Total = txtTotal.Text;
+
+            c.actualizaRegistroVentas(obj);
 
         }
     }

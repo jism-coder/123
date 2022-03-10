@@ -43,6 +43,8 @@
             
         
         <br />
+        <asp:TextBox ID="txtPK_Producto" runat="server" Visible="false"></asp:TextBox>
+        <br />
         Producto:<br />
         <asp:TextBox ID="txtProducto" runat="server" Visible="false"></asp:TextBox>
         <br />
@@ -63,6 +65,7 @@
         <asp:TextBox ID="txtCantidad" runat="server" Visible="false"></asp:TextBox>
         <br />
         <br />
+        <asp:Button ID="btnActualizarRegistro" runat="server" Text="Actualizar" OnClick="btnActualizarRegistro_Click" />
 
 
     </form>

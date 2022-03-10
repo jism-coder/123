@@ -40,6 +40,7 @@ namespace WebApplication1.Controles
             ModeloUsuario obj = new ModeloUsuario();
             obj = c.get1Usuario(valor);
 
+            txtPK_Usuario.Text = obj.PK_Usuarios.ToString();
             txtNombre.Text = obj.Nombre;
             txtNombre.Visible = true;
 
@@ -79,12 +80,26 @@ namespace WebApplication1.Controles
             txtRFC.Text = "";
             txtRFC.Visible = false;
 
-
-
         }
 
-        protected void idGvUsuarios_SelectedIndexChanged(object sender, EventArgs e)
+        protected void btnActualizarRegistroUsuario_Click(object sender, EventArgs e)
         {
+            int pk = Int32.Parse(txtPK_Usuario.Text);
+            int Telefono = Int32.Parse(txtTelefono.Text);
+
+            ModeloUsuario obj = new ModeloUsuario();
+            Consultas.Consultas c = new Consultas.Consultas();
+
+            obj.PK_Usuarios = pk;
+            obj.Nombre = txtNombre.Text;
+            obj.Apellido_Paterno = txtApeterno.Text;
+            obj.Apellido_Materno = txtAmaterno.Text;
+            obj.Direccion = txtDireccion.Text;
+            obj.Telefono = Telefono;
+            obj.RFC = txtRFC.Text;
+
+            c.actualizaRegistroUsuario(obj);
+
 
         }
     }

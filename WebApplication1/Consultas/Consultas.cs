@@ -8,6 +8,58 @@ namespace WebApplication1.Consultas
 {
     public class Consultas
     {
+            public void actualizaRegistro(ModeloProductos obj)
+            {
+                ventas1Entities2 db = new ventas1Entities2();
+            
+                var actualizaProducto = new Productos();
+                actualizaProducto.PK_Producto = obj.pk_producto;
+                actualizaProducto.Producto = obj.Producto;
+                actualizaProducto.Descripcion = obj.Descripcion;
+                actualizaProducto.Disponibilidad = obj.Disponibilidad;
+                actualizaProducto.Precio = obj.Precio;
+                actualizaProducto.Cantidad = obj.Cantidad;
+
+                db.Entry(actualizaProducto).State = System.Data.Entity.EntityState.Modified;
+
+                db.SaveChanges();
+
+            }
+            public void actualizaRegistroUsuario(ModeloUsuario obj)
+            {
+                ventas1Entities2 db = new ventas1Entities2();
+                var actualizausuario = new Usuario();
+                actualizausuario.PK_Usuarios = obj.PK_Usuarios;
+                actualizausuario.Nombre = obj.Nombre;
+                actualizausuario.Apellido_Paterno = obj.Apellido_Paterno;
+                actualizausuario.Apellido_Materno = obj.Apellido_Materno;
+                actualizausuario.Direccion = obj.Direccion;
+                actualizausuario.Telefono = obj.Telefono;
+                actualizausuario.RFC = obj.RFC;
+
+            db.Entry(actualizausuario).State = System.Data.Entity.EntityState.Modified;
+            db.SaveChanges();
+
+            }
+        public void actualizaRegistroVentas(ModeloVentas obj)
+        {
+            ventas1Entities2 db = new ventas1Entities2();
+            var actualizaventas = new Ventas();
+            actualizaventas.PK_Ventas = obj.pk_ventas;
+            actualizaventas.Producto = obj.Producto;
+            actualizaventas.Cantidad = obj.Cantidad;
+            actualizaventas.Usuario = obj.Usuario;
+            actualizaventas.Fecha = obj.Fecha;
+            actualizaventas.Forma_Pago = obj.Forma_Pago;
+            actualizaventas.Total = obj.Total;
+
+            db.Entry(actualizaventas).State = System.Data.Entity.EntityState.Modified;
+            db.SaveChanges();
+
+
+        }
+
+            
 
             public ModeloProductos get1Producto(int pK_producto)
             {
@@ -20,6 +72,7 @@ namespace WebApplication1.Consultas
                              where a.PK_Producto == pK_producto
                              select new ModeloProductos
                              {
+                                 pk_producto =a.PK_Producto,
                                  Producto = a.Producto,
                                  Descripcion = a.Descripcion,
                                  Disponibilidad = a.Disponibilidad,
@@ -45,6 +98,7 @@ namespace WebApplication1.Consultas
                              where a.PK_Ventas == pK_ventas
                              select new ModeloVentas
                              {
+                                pk_ventas=a.PK_Ventas,
                                 Producto = a.Producto,
                                 Cantidad = a.Cantidad.Value,
                                 Usuario = a.Usuario,
@@ -70,6 +124,7 @@ namespace WebApplication1.Consultas
                          where a.PK_Usuarios == pK_usuario
                          select new ModeloUsuario
                          {
+                             PK_Usuarios= a.PK_Usuarios,
                              Nombre = a.Nombre,
                              Apellido_Paterno = a.Apellido_Paterno,
                              Apellido_Materno = a.Apellido_Materno,

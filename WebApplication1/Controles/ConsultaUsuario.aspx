@@ -16,7 +16,7 @@
                 runat="server"
                 AutoGenerateColumns="false"
                 DataKeyNames="PK_Usuarios"
-                OnRowCommand="ComandRowUsuario" OnSelectedIndexChanged="idGvUsuarios_SelectedIndexChanged" 
+                OnRowCommand="ComandRowUsuario" 
                 >
                 <Columns>
                     <asp:TemplateField ControlStyle-CssClass="ms-crm-List-Datacell">
@@ -39,6 +39,8 @@
             </asp:GridView>
             <br />
             <asp:Button ID="btnConsultaUsuario" runat="server" Text="Limpia consulta"  OnClick="btnConsultaUsuario_Click"/>
+            <br />
+            <asp:TextBox ID="txtPK_Usuario" runat="server" Visible="false"></asp:TextBox>
             <br />
             Nombre:<br />
             <asp:TextBox ID="txtNombre" runat="server" Visible="false"></asp:TextBox>
@@ -64,6 +66,7 @@
             <asp:TextBox ID="txtRFC" runat="server" Visible="false"></asp:TextBox>
             <br />
             <br />
+            <asp:Button ID="btnactualizarUsuario" runat="server" Text="Actualizar" OnClick="btnActualizarRegistroUsuario_Click" /> />
        
     </form>
 </body>
